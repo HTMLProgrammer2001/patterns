@@ -3,7 +3,7 @@ import FlyWithWings from './Fly/FlyWithWings';
 import NoFly from './Fly/NoFly';
 
 class Duck extends Animal{
-	constructor(name){
+	constructor(name: string){
 		super(name);
 
 		this.flyBehave = new FlyWithWings();
