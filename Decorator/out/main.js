@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var Coffee_1 = require("./Drinks/Coffee");
+var Latte_1 = require("./Drinks/Latte");
+var Sugar_1 = require("./Condiments/Sugar");
+var Chocolate_1 = require("./Condiments/Chocolate");
+var Milk_1 = require("./Condiments/Milk");
+var coffee = new Coffee_1["default"]();
+coffee = new Sugar_1["default"](coffee);
+coffee = new Sugar_1["default"](coffee);
+coffee = new Milk_1["default"](coffee);
+console.log(coffee.getDescription() + ': $' + coffee.cost());
+var latte = new Latte_1["default"]();
+latte = new Chocolate_1["default"](latte);
+latte = new Milk_1["default"](latte);
+console.log(latte.getDescription() + ': $' + latte.cost());
