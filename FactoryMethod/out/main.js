@@ -1,0 +1,14 @@
+"use strict";
+exports.__esModule = true;
+var TrainDelivery_1 = require("./Deliveries/TrainDelivery");
+var PlaneDelivery_1 = require("./Deliveries/PlaneDelivery");
+var CarDelivery_1 = require("./Deliveries/CarDelivery");
+var deliveryOrder = new CarDelivery_1["default"]();
+deliveryOrder.setDistance(3000);
+deliveryOrder.deliver();
+deliveryOrder = new PlaneDelivery_1["default"]();
+deliveryOrder.setDistance(3000);
+deliveryOrder.deliver();
+deliveryOrder = new TrainDelivery_1["default"]();
+deliveryOrder.setDistance(3000);
+deliveryOrder.deliver();
