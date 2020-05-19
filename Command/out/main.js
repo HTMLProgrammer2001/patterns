@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var Editor_1 = require("./Editor");
+var Button_1 = require("./Button");
+var CutCommand_1 = require("./Commands/CutCommand");
+var CopyCommand_1 = require("./Commands/CopyCommand");
+var PasteCommand_1 = require("./Commands/PasteCommand");
+var Clipboard_1 = require("./Clipboard");
+var editor = new Editor_1["default"]('Hi, i love patterns'), clipboard = Clipboard_1["default"].getInstance(), copyButton = new Button_1["default"]('Copy'), cutButton = new Button_1["default"]('Cut'), pasteButton = new Button_1["default"]('Paste'), copyCommand = new CopyCommand_1["default"](editor), cutCommand = new CutCommand_1["default"](editor), pasteCommand = new PasteCommand_1["default"](editor);
+copyButton.setCommand(copyCommand);
+cutButton.setCommand(cutCommand);
+pasteButton.setCommand(pasteCommand);
+editor.setRange(3, 8);
+copyButton.wasPressed();
+pasteButton.wasPressed();
+cutButton.wasPressed();
