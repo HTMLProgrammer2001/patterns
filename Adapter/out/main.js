@@ -1,0 +1,13 @@
+"use strict";
+exports.__esModule = true;
+var Auto_1 = require("./Transports/Auto");
+var Bike_1 = require("./Transports/Bike");
+var Camel_1 = require("./Animals/Camel");
+var Horse_1 = require("./Animals/Horse");
+var AnimalTransport_1 = require("./AnimalTransport");
+var Traveler_1 = require("./Traveler");
+var traveler = new Traveler_1["default"](), auto = new Auto_1["default"](), bike = new Bike_1["default"](), camel = new Camel_1["default"](), horse = new Horse_1["default"]();
+traveler.travel(auto);
+traveler.travel(bike);
+traveler.travel(new AnimalTransport_1["default"](camel));
+traveler.travel(new AnimalTransport_1["default"](horse));
