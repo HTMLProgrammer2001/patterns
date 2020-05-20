@@ -14,7 +14,6 @@ var Button = /** @class */ (function () {
     Button.prototype.wasPressed = function () {
         console.log(this.name + " was pressed");
         this.comm.execute();
-        this.comm = new NoneCommand_1["default"]();
     };
     return Button;
 }());

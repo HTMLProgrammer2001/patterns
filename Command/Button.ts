@@ -16,7 +16,6 @@ class Button{
 		console.log(`${this.name} was pressed`);
 
 		this.comm.execute();
-		this.comm = new NoneCommand();
 	}
 }
 
