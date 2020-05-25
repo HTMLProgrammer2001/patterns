@@ -1,0 +1,18 @@
+"use strict";
+exports.__esModule = true;
+var Folder_1 = require("./Filesystem/Folder");
+var File_1 = require("./Filesystem/File");
+var fileSystem = new Folder_1["default"]('fileSystem'), disk = new Folder_1["default"]('Disk C'), images = new Folder_1["default"]('images'), doc = new File_1["default"]('documentation.docx', 100000), png = new File_1["default"]('pets.png', 203405), jpeg = new File_1["default"]('ava.jpg', 4000234);
+fileSystem.add(disk);
+disk.add(images);
+disk.add(doc);
+images.add(png);
+images.add(jpeg);
+console.log("Filesystem size is " + fileSystem.getSize());
+console.log("Images folder size is " + images.getSize());
+images.remove(jpeg);
+console.log("Images folder size is " + images.getSize());
+console.log('Filesystem');
+console.log(fileSystem.print());
+console.log('Image folder');
+console.log(images.print());
