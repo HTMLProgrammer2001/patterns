@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var User_1 = require("./User");
+var Application_1 = require("./Application/Application");
+var ApplicationProxy_1 = require("./Application/ApplicationProxy");
+var user = new User_1["default"]('Yura'), app = new Application_1["default"](user);
+app = new ApplicationProxy_1["default"](app);
+app.view();
+user.setRole(User_1.Roles.USER);
+app.view();
+app.edit();
+user.setRole(User_1.Roles.MODERATOR);
+app.edit();
+app.changeSettings();
+user.setRole(User_1.Roles.ADMIN);
+app.changeSettings();
