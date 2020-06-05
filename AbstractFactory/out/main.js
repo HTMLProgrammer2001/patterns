@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var Hero_1 = require("./Hero");
+var ElfFactory_1 = require("./HeroFatories/ElfFactory");
+var VoinFactory_1 = require("./HeroFatories/VoinFactory");
+var elf = new Hero_1["default"](new ElfFactory_1["default"]()), voin = new Hero_1["default"](new VoinFactory_1["default"]());
+elf.move();
+elf.hit();
+voin.move();
+voin.hit();
