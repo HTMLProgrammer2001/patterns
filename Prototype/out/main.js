@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var Rectangle_1 = require("./Figures/Rectangle");
+var Circle_1 = require("./Figures/Circle");
+var rect = new Rectangle_1["default"](10, 20), c = new Circle_1["default"](20);
+rect.getInfo();
+c.getInfo();
+var r2 = rect.clone(), c2 = c.clone();
+r2.w = 40;
+c2.r = 50;
+r2.getInfo();
+c2.getInfo();
