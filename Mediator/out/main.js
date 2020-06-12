@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var DialogMediator_1 = require("./DialogMediator");
+var ButtonWidget_1 = require("./Widgets/ButtonWidget");
+var EditWidget_1 = require("./Widgets/EditWidget");
+var dialog = new DialogMediator_1["default"](), edit = new EditWidget_1["default"](dialog), send = new ButtonWidget_1["default"](dialog), clear = new ButtonWidget_1["default"](dialog);
+dialog.sendButton = send;
+dialog.clearButton = clear;
+dialog.edit = edit;
+edit.changeValue('test');
+send.send();
+clear.send();
