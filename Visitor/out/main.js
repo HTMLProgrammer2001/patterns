@@ -1,0 +1,10 @@
+"use strict";
+exports.__esModule = true;
+var AreaVisitor_1 = require("./Visitors/AreaVisitor");
+var PerimeterVisitor_1 = require("./Visitors/PerimeterVisitor");
+var Circle_1 = require("./Shapes/Circle");
+var Square_1 = require("./Shapes/Square");
+var Rectangle_1 = require("./Shapes/Rectangle");
+var shapes = [new Circle_1["default"](10), new Square_1["default"](5), new Rectangle_1["default"](20, 15)], areaVisitor = new AreaVisitor_1["default"](), perimeterVisitor = new PerimeterVisitor_1["default"]();
+console.log(shapes.reduce(function (prev, shape) { return prev + shape.accept(areaVisitor); }, 0));
+console.log(shapes.reduce(function (prev, shape) { return prev + shape.accept(perimeterVisitor); }, 0));
